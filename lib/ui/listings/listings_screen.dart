@@ -291,11 +291,11 @@ class _FilterBar extends StatelessWidget {
 
   String _format(int v) {
     if (v >= 1000000) {
-      return '\$${(v / 1000000).toStringAsFixed(1)}M';
+      return '₦${(v / 1000000).toStringAsFixed(1)}M';
     }
     if (v >= 1000) {
-      return '\$${(v / 1000).toStringAsFixed(0)}k';
+      return '₦${(v / 1000).toStringAsFixed(0)}k';
     }
-    return '\$$v';
+    return '₦$v';
   }
 }

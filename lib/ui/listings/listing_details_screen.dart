@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:intl/intl.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:provider/provider.dart';
 import 'package:worksquare_housing/core/core.dart';
@@ -88,18 +89,12 @@ class ListingDetailsScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          const Icon(
-                            Icons.attach_money,
-                            color: AppColor.brandBlue,
-                          ),
-                          Text(
-                            '${property.price}',
-                            style: AppTypography.text16.bold,
-                          ),
-                        ],
+                      child: Text(
+                        NumberFormat.currency(
+                          symbol: '₦',
+                          decimalDigits: 0,
+                        ).format(property.price),
+                        style: AppTypography.text16.bold,
                       ),
                     ),
                   ),

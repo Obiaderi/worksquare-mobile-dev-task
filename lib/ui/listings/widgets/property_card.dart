@@ -13,7 +13,7 @@ class PropertyCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final currency = NumberFormat.currency(symbol: '\$', decimalDigits: 0);
+    final currency = NumberFormat.currency(symbol: '₦', decimalDigits: 0);
     return InkWell(
       onTap: () => Navigator.pushNamed(
         context,
